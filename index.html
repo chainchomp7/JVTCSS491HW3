@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TCSS 491 - HW3 Database Savestates</title>
+    <script type="text/javascript" src="http://24.16.255.56:8888/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="./Homework3/gameengine.js"></script>
+	<script type="text/javascript" src="./Homework3/assetmanager.js"></script>
+	<script type="text/javascript" src="./Homework3/jenzelmain.js"></script>
+</head>
+<body>
+    <canvas id="gameWorld" tabindex="1" width="1280" height="720" style="border: 1px solid brown; background: lightskyblue"></canvas>
+</body>
+</html>
+<div><b>Collision Interaction.</b> "Enemies" Follow closely towards the "leader" Jerry, the gray-haired boy.
+<br>When Jerry touches an enemy's inner box (Dino, Snowman, Duck) while "alive", he will become knocked back and become a ghost, 
+and his speed will increase. <br>As a ghost, Jerry cannot be knocked back in this state, though enemies will 
+still attempt to follow. Enemies' larger outer boxes will attempt to make other <br>enemies be pushed away from each other.
+"Healer" components (small boy and 3 top-like machines) will restore him back if he touches one.
+<br>All objects' outer boxes are pushed away from walls. Healers can go through other objects besides walls.
+<br>Outer boxes are green. Enemy inner boxes are red. Jerry and Healers' boxes are blue.</div>
+
+<button id="show_box_btn">Click to Show/Hide Boxes</button>
+
+<button id="save_btn" type="button">Save</button>
+<button id="load_btn" type="button">Load</button>
+<div id = "text"></div>
